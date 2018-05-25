@@ -1,3 +1,5 @@
+USE Hierarchy;
+
 -- hierarchyid as a number path
 DECLARE @hid HIERARCHYID;
 SET @hid = '/1/2/3/4/';

@@ -1,3 +1,5 @@
+USE Hierarchy;
+
 -- add new employee
 
 DECLARE			@boss hierarchyid;

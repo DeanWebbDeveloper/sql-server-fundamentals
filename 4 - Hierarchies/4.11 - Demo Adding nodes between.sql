@@ -1,3 +1,5 @@
+USE Hierarchy;
+
 -- add between
 
 DECLARE			@leftNode hierarchyid

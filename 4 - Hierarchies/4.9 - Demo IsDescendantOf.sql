@@ -1,3 +1,5 @@
+USE Hierarchy;
+
 SELECT			name
 FROM			[personnel (small)]
 WHERE			node.IsDescendantOf('/2/')
