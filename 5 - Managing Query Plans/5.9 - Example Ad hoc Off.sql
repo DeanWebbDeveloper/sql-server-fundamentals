@@ -1,13 +1,15 @@
+USE AdventureWorks2017;
+
 dbcc freeproccache
 
 SELECT			COUNT(*)
-FROM			SalesLT.Customer;
+FROM			Person.Person;
 
 SELECT			*
 FROM			PlanCache
 
 SELECT			COUNT(*)
-FROM			SalesLT.Product;
+FROM			Production.Product;
 
 sp_configure 'show advanced options', 0;
 GO
