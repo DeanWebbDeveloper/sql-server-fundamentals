@@ -1,0 +1,26 @@
+USE				[Recursion etc];
+
+WITH			f1(A, b)
+AS
+(
+	SELECT		102, 4
+	UNION		ALL
+	SELECT		A-1, B+A
+	FROM		f1
+	WHERE		NOT A <= 1
+)
+SELECT			B
+FROM			f1
+WHERE			A = 1
+OPTION			(MAXRECURSION 00)
+
+
+CREATE FUNCTION	f1(@A int, @B int)
+RETURNS			INT
+AS
+BEGIN
+	IF(@A <= 1)	RETURN @B;
+	RETURN		dbo.f1(@A-1, @B + @A);
+END
+
+SELECT dbo.f1(100, 4)
